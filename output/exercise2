@@ -1,0 +1,40 @@
+digraph {
+	rankdir=LR
+	start
+	end
+		"1x" -> "(('1x',), ('Case1', 'Case2'))"
+	"1x" [shape=box]
+	"(('1x',), ('Case1', 'Case2'))" [shape=circle]
+		"(('1x',), ('Case1', 'Case2'))" -> Case1
+	Case1 [shape=box]
+		"(('1x',), ('Case1', 'Case2'))" -> Case2
+	Case2 [shape=box]
+		C -> "(('C',), ('E', 'D'))"
+	C [shape=box]
+	"(('C',), ('E', 'D'))" [shape=circle]
+		"(('C',), ('E', 'D'))" -> E
+	E [shape=box]
+		"(('C',), ('E', 'D'))" -> D
+	D [shape=box]
+		A -> "(('A', 'B'), ('C',))"
+	A [shape=box]
+	"(('A', 'B'), ('C',))" [shape=circle]
+		B -> "(('A', 'B'), ('C',))"
+	B [shape=box]
+	"(('A', 'B'), ('C',))" [shape=circle]
+		"(('A', 'B'), ('C',))" -> C
+	C [shape=box]
+		Case2 -> "(('Case2',), ('B',))"
+	Case2 [shape=box]
+	"(('Case2',), ('B',))" [shape=circle]
+		"(('Case2',), ('B',))" -> B
+	B [shape=box]
+		Case1 -> "(('Case1',), ('A',))"
+	Case1 [shape=box]
+	"(('Case1',), ('A',))" [shape=circle]
+		"(('Case1',), ('A',))" -> A
+	A [shape=box]
+		start -> "1x"
+		E -> end
+		D -> end
+}

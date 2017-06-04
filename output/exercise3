@@ -1,0 +1,60 @@
+digraph {
+	rankdir=LR
+	start
+	end
+		A -> "(('A',), ('E',))"
+	A [shape=box]
+	"(('A',), ('E',))" [shape=circle]
+		"(('A',), ('E',))" -> E
+	E [shape=box]
+		C -> "(('C', 'D'), ('G',))"
+	C [shape=box]
+	"(('C', 'D'), ('G',))" [shape=circle]
+		D -> "(('C', 'D'), ('G',))"
+	D [shape=box]
+	"(('C', 'D'), ('G',))" [shape=circle]
+		"(('C', 'D'), ('G',))" -> G
+	G [shape=box]
+		C -> "(('C', 'F'), ('G',))"
+	C [shape=box]
+	"(('C', 'F'), ('G',))" [shape=circle]
+		F -> "(('C', 'F'), ('G',))"
+	F [shape=box]
+	"(('C', 'F'), ('G',))" [shape=circle]
+		"(('C', 'F'), ('G',))" -> G
+	G [shape=box]
+		E -> "(('E', 'F'), ('G',))"
+	E [shape=box]
+	"(('E', 'F'), ('G',))" [shape=circle]
+		F -> "(('E', 'F'), ('G',))"
+	F [shape=box]
+	"(('E', 'F'), ('G',))" [shape=circle]
+		"(('E', 'F'), ('G',))" -> G
+	G [shape=box]
+		E -> "(('E', 'D'), ('G',))"
+	E [shape=box]
+	"(('E', 'D'), ('G',))" [shape=circle]
+		D -> "(('E', 'D'), ('G',))"
+	D [shape=box]
+	"(('E', 'D'), ('G',))" [shape=circle]
+		"(('E', 'D'), ('G',))" -> G
+	G [shape=box]
+		B -> "(('B',), ('F',))"
+	B [shape=box]
+	"(('B',), ('F',))" [shape=circle]
+		"(('B',), ('F',))" -> F
+	F [shape=box]
+		B -> "(('B',), ('D',))"
+	B [shape=box]
+	"(('B',), ('D',))" [shape=circle]
+		"(('B',), ('D',))" -> D
+	D [shape=box]
+		A -> "(('A',), ('C',))"
+	A [shape=box]
+	"(('A',), ('C',))" [shape=circle]
+		"(('A',), ('C',))" -> C
+	C [shape=box]
+		start -> A
+		start -> B
+		G -> end
+}
