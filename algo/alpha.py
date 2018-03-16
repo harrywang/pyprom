@@ -19,15 +19,15 @@ def apply(log, input_file, output_file):
     tl, df, cs, ncs, par = build_ordering_relations(log)
     xl, yl, ti, to = make_sets(log, tl, df, cs, ncs)
 
-    print "all tasks:", tl
-    print "direct followers:", df
-    print "causalities:", cs
-    print "no_causalities:", ncs
-    print "parallels:", par
-    print "x list:", xl
-    print "y list:", yl
-    print "initial tasks:", ti
-    print "terminal tasks:", to
+    print("all tasks:", tl)
+    print("direct followers:", df)
+    print("causalities:", cs)
+    print("no_causalities:", ncs)
+    print("parallels:", par)
+    print("x list:", xl)
+    print("y list:", yl)
+    print("initial tasks:", ti)
+    print("terminal tasks:", to)
 
     build_petrinet(tl, yl, ti, to, output_file)
 
@@ -55,7 +55,7 @@ def get_direct_followers(log):
     df = []
     for trace in log:
         for index, event in enumerate(trace):
-            print index, event
+            print(index, event)
             if index != len(trace)-1:
                 if (event, trace[index+1]) not in df:
                     df.append((event, trace[index+1]))

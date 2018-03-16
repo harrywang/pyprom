@@ -28,7 +28,7 @@ def main(argv):
                 if line not in log:  # some sequence only counts once
                     log.append(line)
 
-    print log, input_file, output_file
+    print(log, input_file, output_file)
 
     alpha.apply(log, input_file, output_file)
 
