@@ -2,36 +2,36 @@ digraph {
 	rankdir=LR
 	start
 	end
-		B -> "(('B', 'E'), ('D',))"
-	B [shape=box]
-	"(('B', 'E'), ('D',))" [shape=circle]
-		E -> "(('B', 'E'), ('D',))"
+	C -> "(('C', 'E'), ('D',))"
+	C [shape=box]
+	"(('C', 'E'), ('D',))" [shape=circle]
+	E -> "(('C', 'E'), ('D',))"
 	E [shape=box]
-	"(('B', 'E'), ('D',))" [shape=circle]
-		"(('B', 'E'), ('D',))" -> D
+	"(('C', 'E'), ('D',))" [shape=circle]
+	"(('C', 'E'), ('D',))" -> D
 	D [shape=box]
-		A -> "(('A',), ('B', 'E'))"
-	A [shape=box]
-	"(('A',), ('B', 'E'))" [shape=circle]
-		"(('A',), ('B', 'E'))" -> B
+	B -> "(('B', 'E'), ('D',))"
 	B [shape=box]
-		"(('A',), ('B', 'E'))" -> E
+	"(('B', 'E'), ('D',))" [shape=circle]
+	E -> "(('B', 'E'), ('D',))"
 	E [shape=box]
-		A -> "(('A',), ('C', 'E'))"
+	"(('B', 'E'), ('D',))" [shape=circle]
+	"(('B', 'E'), ('D',))" -> D
+	D [shape=box]
+	A -> "(('A',), ('C', 'E'))"
 	A [shape=box]
 	"(('A',), ('C', 'E'))" [shape=circle]
-		"(('A',), ('C', 'E'))" -> C
+	"(('A',), ('C', 'E'))" -> C
 	C [shape=box]
-		"(('A',), ('C', 'E'))" -> E
+	"(('A',), ('C', 'E'))" -> E
 	E [shape=box]
-		C -> "(('C', 'E'), ('D',))"
-	C [shape=box]
-	"(('C', 'E'), ('D',))" [shape=circle]
-		E -> "(('C', 'E'), ('D',))"
+	A -> "(('A',), ('B', 'E'))"
+	A [shape=box]
+	"(('A',), ('B', 'E'))" [shape=circle]
+	"(('A',), ('B', 'E'))" -> B
+	B [shape=box]
+	"(('A',), ('B', 'E'))" -> E
 	E [shape=box]
-	"(('C', 'E'), ('D',))" [shape=circle]
-		"(('C', 'E'), ('D',))" -> D
-	D [shape=box]
-		start -> A
-		D -> end
+	start -> A
+	D -> end
 }
